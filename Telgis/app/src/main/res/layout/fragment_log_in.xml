@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LogInFragment"
+    android:radius="16dp"
+    android:elevation="20dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/background_img" />
+        <TextView
+            android:id="@+id/loginText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вход"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="36sp" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/username"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="25dp"
+            android:hint="Логин"
+            android:textColorHint="@color/grey"
+            android:textColor = "@color/black"
+            android:autofillHints=""
+            android:inputType="textVisiblePassword|textNoSuggestions"
+            android:elevation="8dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/password"
+            android:background="@drawable/custom_edittext"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="25dp"
+            android:hint="Пароль"
+            android:textColorHint="@color/grey"
+            android:textColor = "@color/black"
+            android:autofillHints=""
+            android:inputType="textPassword"
+            android:elevation="8dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/blue_unpressed"
+            android:text="Вход"
+            android:textSize="18sp"
+            app:cornerRadius="16dp"
+            android:elevation="20dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/signinButton"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:backgroundTint="@color/white"
+            android:text="Регистрация"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            app:cornerRadius="16dp"
+            android:elevation="20dp"
+            />
+    </LinearLayout>
+</FrameLayout>
