@@ -20,11 +20,13 @@ class SignInFragment : Fragment() {
         var binding = FragmentSignInBinding.inflate(inflater, container, false)
         binding.signinButton.setOnClickListener {
             if(binding.password.text.toString() == binding.confirmPassword.text.toString()){
-                if(signinUseCase.execute(binding.loginText.text.toString(), binding.password.text.toString())){
+                if(signinUseCase.execute(binding.username.text.toString(), binding.password.text.toString())){
                     Toast.makeText(context, "Sign in sucess!", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(context, "An error has occured!", Toast.LENGTH_SHORT).show()
                 }
+            } else{
+                Toast.makeText(context, "Password and confirmation mismatch!", Toast.LENGTH_SHORT).show()
             }
         }
         binding.loginButton.setOnClickListener {

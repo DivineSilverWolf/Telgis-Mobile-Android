@@ -1,5 +1,6 @@
 package com.example.Telgis
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -26,8 +27,10 @@ class LogInFragment : Fragment() {
             ft.replace(R.id.fragmentContainerView, sf).addToBackStack(null).commit()
         }
         binding.loginButton.setOnClickListener{
-            if(loginUseCase.execute(binding.loginText.text.toString(), binding.password.text.toString())){
+            if(loginUseCase.execute(binding.username.text.toString(), binding.password.text.toString())){
                 Toast.makeText(context, "Log in sucess!", Toast.LENGTH_SHORT).show()
+                val intent = Intent(activity, FriendsActivity::class.java)
+                startActivity(intent)
             } else{
                 Toast.makeText(context, "Wrong username or password!", Toast.LENGTH_SHORT).show()
             }
